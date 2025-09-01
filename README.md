@@ -42,6 +42,6 @@ The action space for each agent is `Discrete(15)`, where the integer corresponds
 Rewards are only distributed at the end of the game when all marbles have been collected. The final reward for each agent is calculated as follows:
 
 1.  **Positive Reward**: The sum of the `size` values for all marbles belonging to the **two most common colors** in the agent's final collection.
-2.  **Negative Reward**: A penalty based on the average `weight` of the agent's final collection. The penalty is calculated as `10 * max(0, avg_weight - 3)`.
+2.  **Negative Reward**: A penalty based on the average `weight` of the agent's final collection (**two most common colors**). The penalty is calculated as `10 * max(0, avg_weight - 3)`.
 
 The total reward is `positive_reward - negative_reward`.
